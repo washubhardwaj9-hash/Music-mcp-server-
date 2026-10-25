@@ -1,5 +1,5 @@
 from fastmcp import FastMCP
-from JioSaavn import JioSaavn
+from jiosaavnpy import JioSaavn
 
 mcp = FastMCP("JioSaavn Music Server")
 jio = JioSaavn()
