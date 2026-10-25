@@ -1,3 +1,4 @@
+import os
 from fastmcp import FastMCP
 from jiosaavnpy import JioSaavn
 
@@ -10,4 +11,5 @@ def search_songs(query: str, limit: int = 5):
     return jio.search_songs(query, limit=limit)
 
 if __name__ == "__main__":
-    mcp.run()
+    port = int(os.environ.get("PORT", 10000))
+    mcp.run(transport="http", host="0.0.0.0", port=port)
